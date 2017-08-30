@@ -1,0 +1,131 @@
+<div class="container-fluid main-container text-center">
+  <h1>Calculator APP <small>FreecodeCamp Challenge</small></h1>
+
+  <div class="container carcasa text-center main-container">
+    <h3>KASHIO <small>ALMUSPROOF</small></h3>
+
+    <div class="container pantalla text-right">
+      <div class="row">
+        <div class="col-md-12 text-right">
+          <h6 *ngIf="funcion.length<36">{{funcion}}</h6><h6 *ngIf="funcion.length>36">Función muy larga. No se muestra</h6>
+
+
+          <h4>{{numtemp}}</h4>
+          <h4 *ngIf="resultFlag">{{resultado}}</h4>
+        </div>
+    </div>
+          </div>
+
+    <div class="container">
+
+        <div class="row  fila-calc">
+          <div class="col-md-3">
+            <button (click)="botonAC()"
+             type="button" class="btn btn-primary btn-sm btn-block">AC</button>
+          </div>
+          <div class="col-md-3">
+            <button (click) = "botonCE()"
+             type="button" class="btn btn-primary btn-sm btn-block">CE</button>
+          </div>
+          <div class="col-md-3">
+            <button (click)="botonOperador('/')"
+             type="button" class="btn btn-primary btn-sm btn-block">/</button>
+          </div>
+          <div class="col-md-3">
+            <button (click)="botonOperador('*')"
+            type="button" class="btn btn-primary btn-sm btn-block">X</button>
+          </div>
+        </div>
+
+        <div class="row fila-calc">
+          <div class="col-md-3">
+            <button (click)="botonNum('7')"
+             type="button" class="btn btn-primary btn-sm btn-block">7</button>
+          </div>
+          <div class="col-md-3">
+            <button (click)="botonNum('8')"
+             type="button" class="btn btn-primary btn-sm btn-block">8</button>
+          </div>
+          <div class="col-md-3">
+            <button (click)="botonNum('9')"
+            type="button" class="btn btn-primary btn-sm btn-block">9</button>
+          </div>
+          <div class="col-md-3">
+            <button (click)="botonOperador('-')"
+            type="button" class="btn btn-primary btn-sm btn-block">-</button>
+          </div>
+        </div>
+
+        <div class="row fila-calc">
+          <div class="col-md-3">
+            <button (click)="botonNum('4')"
+             type="button" class="btn btn-primary btn-sm btn-block" >4</button>
+          </div>
+          <div class="col-md-3">
+            <button (click)="botonNum('5')"
+             type="button" class="btn btn-primary btn-sm btn-block">5</button>
+          </div>
+          <div class="col-md-3">
+            <button (click)="botonNum('6')"
+            type="button" class="btn btn-primary btn-sm btn-block">6</button>
+          </div>
+          <div class="col-md-3">
+            <button (click)="botonOperador('+')"
+            type="button" class="btn btn-primary btn-sm btn-block">+</button>
+          </div>
+        </div>
+
+        <div class="row fila-calc">
+          <div class="col-md-9">
+            <div class="row">
+
+              <div class="col-md-4">
+                <button (click)="botonNum('1')"
+                type="button" class="btn btn-primary btn-sm btn-block" >1</button>
+              </div>
+
+              <div class="col-md-4">
+                <button (click)="botonNum('2')"
+                type="button" class="btn btn-primary btn-sm btn-block">2</button>
+              </div>
+
+              <div class="col-md-4">
+                <button (click)="botonNum('3')"
+                 type="button" class="btn btn-primary btn-sm btn-block">3</button>
+              </div>
+
+
+            </div>
+            <div class="row fila-calc">
+              <div class="col-md-8">
+                <button (click)="botonNum('0')"
+                type="button" class="btn btn-primary btn-sm btn-block">0</button>
+              </div>
+              <div class="col-md-4">
+                <button (click)="botonPunto()" [disabled] = "puntoFlag"
+                type="button" class="btn btn-primary btn-sm btn-block">.</button>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-md-3">
+            <button  (click) = "botonigual()" [disabled] = "operatorFlag"
+            type="button" class="btn btn-primary btn-sm btn-block btn-igual">=</button>
+            <br><br><br><br>
+          </div>
+
+          </div>
+
+        </div>
+
+
+  </div>
+</div>
+<br><br><br>
+<footer id="footer" class="text-center">
+  <div class="container">
+    Designed & Coded by
+    <a href="https://www.freecodecamp.org/danyjaen" target="_blank">
+        Daniel Lopez</a>
+  </div>
+</footer>
